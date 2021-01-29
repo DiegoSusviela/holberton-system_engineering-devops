@@ -1,2 +1,2 @@
 #!/bin/bash
-ascii -147
+echo "\"(Ôo)\'"
