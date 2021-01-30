@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la | wc -l
+find . -mindepth 1 -name ".*" -o -type d | wc -l
