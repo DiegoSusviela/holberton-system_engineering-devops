@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f -name ".*.gif" -o -type f -name ".gif" | sed 's#.*/##' | sort LC_ALL=C 
+find -type f -name "*.gif" | sed 's#.*/##' | LC_ALL=C sort | sed -e 's/\.gif//'
