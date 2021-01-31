@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name ".*" -empty -o -empty | sed 's#.*/##'
+find -name ".*" -empty -o -empty -printf "%f\n" 
