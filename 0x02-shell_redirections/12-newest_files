@@ -1,2 +1,2 @@
 #!/bin/bash
-head -n 11 <(find . | ls -t) | tail
+head -n 10 <(find . | ls -t) | tail
