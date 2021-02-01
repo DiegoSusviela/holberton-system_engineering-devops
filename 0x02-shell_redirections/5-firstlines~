@@ -1,2 +1,0 @@
-#!/bin/bash
-cat head -10 /etc/passwd
