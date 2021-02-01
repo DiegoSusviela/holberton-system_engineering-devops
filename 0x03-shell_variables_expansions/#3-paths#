@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $PATH | tr | Wc  -L
+-234
