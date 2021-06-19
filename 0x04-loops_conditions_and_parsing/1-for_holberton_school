@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# sdionasdjkoas
+
+for _ in $(seq 1 10);
+do
+	echo "Holberton School"
+done

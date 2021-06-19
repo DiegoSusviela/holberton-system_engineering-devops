@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# asdfasda
+
+COUNTER=0
+until [ "$COUNTER" -eq 10 ]; do
+	echo "Holberton School"
+	let COUNTER=COUNTER+1
+done
