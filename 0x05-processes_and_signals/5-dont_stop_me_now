@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # comentario akldna
 
-kill "$(pgrep -f "4-to_infinity_and_beyond")" -SIGINT
+kill "$(pgrep -f "4-to_infinity_and_beyond")"
