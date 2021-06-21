@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # comentario akldna
 
-pkill -f "7-highlander" SIGTERM
+pkill -f "7-highlander" --signal SIGTERM
