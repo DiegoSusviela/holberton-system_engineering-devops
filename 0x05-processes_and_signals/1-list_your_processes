@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # comentario akldna
 
-echo $$
+ps auxf
