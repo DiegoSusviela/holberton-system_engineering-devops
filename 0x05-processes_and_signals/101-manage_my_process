@@ -5,7 +5,7 @@ case "$1" in
     start)
 		/etc/init.d/manage_my_process start
 		echo "manage_my_process started"
-		echo "$$" > /var/run/my_process.pid
+		echo "$$" > "/var/run/my_process.pid"
 		;;
 	stop)
 		/etc/init.d/manage_my_process stop
@@ -16,7 +16,7 @@ case "$1" in
 		/etc/init.d/manage_my_process stop
 		rm -f /var/run/my_process.pid
 		/etc/init.d/manage_my_process start
-		echo "$$" > /var/run/my_process.pid
+		echo "$$" > "/var/run/my_process.pid"
 		echo "manage_my_process restarted"
 		;;
 	*)
