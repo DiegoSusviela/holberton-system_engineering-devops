@@ -3,19 +3,19 @@
 
 case "$1" in
     start)
-		./manage_my_process &
+		/etc/init.d/manage_my_process stop
 		echo "manage_my_process started"
 		echo "$$" > "/var/run/my_process.pid"
 		;;
 	stop)
-		kill "$(cat /var/run/my_process.pid)"
+		/etc/init.d/manage_my_process stop
 		rm -f /var/run/my_process.pid
 		echo "manage_my_process stopped"
 		;;
 	restart)
-		kill "$(cat /var/run/my_process.pid)"
+		/etc/init.d/manage_my_process stop
 		rm -f /var/run/my_process.pid
-		./manage_my_process &
+		/etc/init.d/manage_my_process stop
 		echo "$$" > "/var/run/my_process.pid"
 		echo "manage_my_process restarted"
 		;;
