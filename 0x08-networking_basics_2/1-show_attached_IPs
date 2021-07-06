@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Show active IPv4 IPs
+ifconfig | grep -oP "(?<=addr:)[\d.]*"
