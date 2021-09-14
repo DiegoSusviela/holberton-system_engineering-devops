@@ -21,6 +21,6 @@ if __name__ == '__main__':
         taskss["task"] = task.get('title')
         taskss["completed"] = task.get('completed')
         taskss["username"] = usr_dic.get(user_iid)
-        dico[str(user_iid)].append(taskss)
+        dico.get(user_iid).append(taskss)
     with open("todo_all_employees.json", 'w') as jsonfile:
         json.dump(dico, jsonfile)
