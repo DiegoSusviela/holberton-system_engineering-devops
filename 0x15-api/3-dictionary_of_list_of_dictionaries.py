@@ -10,17 +10,17 @@ if __name__ == '__main__':
     dic = {}
     usr_dic = {}
     for pos in r:
-        user_id = pos.get("id")
-        dic[user_id] = []
-        usr_dic[user_id] = pos.get("username")
-    all = requests.get("https://jsonplaceholder.typicode.com/todos",
-                       verify=False).json()
-    for task in all:
-        task = {}
-        user_id = task.get("userId")
-        task["task"] = task.get('title')
-        task["completed"] = task.get('completed')
-        task["username"] = usr_dic.get(user_id)
-        dic.get(user_id).append(task)
+        user_iid = pos.get("id")
+        dic[user_iid] = []
+        usr_dic[user_iid] = pos.get("username")
+    alls = requests.get("https://jsonplaceholder.typicode.com/todos",
+                        verify=False).json()
+    for taskss in alls:
+        taskss = {}
+        user_iid = taskss.get("userId")
+        taskss["taskss"] = taskss.get('title')
+        taskss["completed"] = taskss.get('completed')
+        taskss["username"] = usr_dic.get(user_iid)
+        dic.get(user_iid).append(taskss)
     with open("todo_all_employees.json", 'w') as jsonfile:
         json.dump(dic, jsonfile)
