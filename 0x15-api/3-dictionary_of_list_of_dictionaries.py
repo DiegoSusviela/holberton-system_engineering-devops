@@ -18,9 +18,9 @@ if __name__ == '__main__':
     for taskss in alls:
         taskss = {}
         user_iid = taskss.get("userId")
-        taskss["taskss"] = taskss.get('title')
+        taskss["task"] = taskss.get('title')
         taskss["completed"] = taskss.get('completed')
         taskss["username"] = usr_dic.get(user_iid)
-        dic.get(user_iid).append(taskss)
+        dic[str(user_iid)].append(taskss)
     with open("todo_all_employees.json", 'w') as jsonfile:
         json.dump(dic, jsonfile)
