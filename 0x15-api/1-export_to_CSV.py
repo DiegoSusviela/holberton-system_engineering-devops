@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ a wopa"""
 
-import requests
 import csv
+import requests
 from sys import argv
 
 
