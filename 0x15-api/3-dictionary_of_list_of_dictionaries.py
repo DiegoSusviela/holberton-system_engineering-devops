@@ -7,20 +7,20 @@ import requests
 if __name__ == '__main__':
     r = requests.get("https://jsonplaceholder.typicode.com/users",
                      verify=False).json()
-    dic = {}
+    dico = {}
     usr_dic = {}
     for pos in r:
         user_iid = pos.get("id")
-        dic[user_iid] = []
+        dico[user_iid] = []
         usr_dic[user_iid] = pos.get("username")
     alls = requests.get("https://jsonplaceholder.typicode.com/todos",
                         verify=False).json()
-    for taskss in alls:
+    for task in alls:
         taskss = {}
-        user_iid = taskss.get("userId")
-        taskss["task"] = taskss.get('title')
-        taskss["completed"] = taskss.get('completed')
+        user_iid = task.get("userId")
+        taskss["task"] = task.get('title')
+        taskss["completed"] = task.get('completed')
         taskss["username"] = usr_dic.get(user_iid)
-        dic[str(user_iid)].append(taskss)
+        dico[str(user_iid)].append(taskss)
     with open("todo_all_employees.json", 'w') as jsonfile:
-        json.dump(dic, jsonfile)
+        json.dump(dico, jsonfile)
