@@ -15,11 +15,11 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
     for pos in hot:
         tit = pos.get('data').get('title')
         for pos2 in word_list:
-                for pos3 in tit.split():
-                    if pos2.lower() in pos3.lower():
-                        count += 1
-                results[pos2] = count
-            count = 0
+            for pos3 in tit.split():
+                if pos2.lower() in pos3.lower():
+                    count += 1
+            results[pos2] = count
+        count = 0
     pagination = res.get('data').get('after')
     if pagination is not None:
         count_words(subreddit, word_list, pagination, results, count)
