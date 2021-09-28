@@ -2,6 +2,7 @@
 """ Reddit API"""
 import requests
 
+
 def count_words(subreddit, word_list, pagination="", results={}, count=0):
     headers = {'User-Agent': 'Mozilla/5.0'}
     url = 'https://www.reddit.com/r/' + subreddit +\
@@ -16,9 +17,9 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
         for pos2 in word_list:
                 for pos3 in tit.split():
                     if pos2.lower() in pos3.lower():
-                        cont += 1
-                results[i] = cont
-            cont = 0
+                        count += 1
+                results[i] = count
+            count = 0
     pagination = res.get('data').get('after')
     if pagination is not None:
         count_words(subreddit, word_list, pagination, results, count)
