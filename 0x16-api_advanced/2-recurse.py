@@ -5,10 +5,9 @@ import requests
 
 def recurse(subreddit, hot_list=[], pagination=""):
     headers = {'User-Agent': 'Mozilla/5.0'}
-    r_u = requests.get('https://www.reddit.com/r/' + subreddit +\
-          	           '/hot.json?after={}'.format(pagination)' +
-                       subreddit + '/hot.json?limit=10',
-                       headers=headers, allow_redirects=False)
+    url = 'https://www.reddit.com/r/' + subreddit +\
+          '/hot.json?after={}'.format(pagination)
+    r_u = requests.get(url, headers=headers, allow_redirects=False)
     if r_u.status_code != 200:
         return None
     res = r_u.json()
