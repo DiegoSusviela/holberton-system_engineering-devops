@@ -5,7 +5,7 @@ import requests
 def count_words(subreddit, word_list, pagination="", results={}, count=0):
     headers = {'User-Agent': 'Mozilla/5.0'}
     url = 'https://www.reddit.com/r/' + subreddit +\
-            '/hot.json?after={}'.format(pagination)
+          '/hot.json?after={}'.format(pagination)
     r_u = requests.get(url, headers=headers, allow_redirects=False)
     if r_u.status_code != 200:
         return None
