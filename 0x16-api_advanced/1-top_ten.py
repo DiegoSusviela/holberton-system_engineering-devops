@@ -2,6 +2,7 @@
 """ Reddit API"""
 import requests
 
+
 def top_ten(subreddit):
     headers = {'User-Agent': 'Mozilla/5.0'}
     r_u = requests.get('https://www.reddit.com/r/' +
