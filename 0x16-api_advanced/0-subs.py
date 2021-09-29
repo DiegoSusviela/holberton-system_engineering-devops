@@ -9,6 +9,6 @@ def number_of_subscribers(subreddit):
                        subreddit + '/about.json',
                        headers=headers, allow_redirects=False)
     if r_u.status_code == 200:
-        usr = req_users.json().get('data')
+        usr = r_u.json().get('data')
         return usr.get('subscribers')
     return 0
